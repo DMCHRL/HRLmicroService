@@ -1,12 +1,12 @@
 package com.hrl.mircoservice.entities;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -20,6 +20,7 @@ import java.io.Serializable;
 public class Student implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column
@@ -28,8 +29,7 @@ public class Student implements Serializable {
     @Column
     private int age;
 
-    @Column
+    @Column(columnDefinition="default DATABASE()")
     private String comment;
-
 
 }

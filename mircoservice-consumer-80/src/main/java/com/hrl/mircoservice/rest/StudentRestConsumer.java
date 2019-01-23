@@ -15,15 +15,20 @@ import java.util.List;
 @RestController
 public class StudentRestConsumer {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //直接访问提供者
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+
+    //通过eureka访问提供者
+    private static final String REST_URL_PREFIX = "http://MIRCOSERVICE-STUDENT";
+
 
     @Autowired
     private RestTemplate restTemplate;
 
     @RequestMapping(value="/consumer/student/add")
-    public boolean add(Student student)
+    public Student add(Student student)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/student/add", student, Boolean.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/student/add", student, Student.class);
     }
 
     @RequestMapping(value="/consumer/student/get/{id}")
