@@ -9,9 +9,9 @@
     <relativePath>../mircoservice-parent/pom.xml</relativePath>
 </parent>
 
-<artifactId>mircoservice-provider-student-8001</artifactId>
+<artifactId>mircoservice-provider-show-8004</artifactId>
 
-<name>mircoservice-provider-student-8001</name>
+<name>mircoservice-provider-show-8004</name>
 <!-- FIXME change it to the project's website -->
 <url>http://www.example.com</url>
 
@@ -77,11 +77,6 @@
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <!--  hystrix -->
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-hystrix</artifactId>
     </dependency>
 </dependencies>
 

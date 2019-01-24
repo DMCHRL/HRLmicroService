@@ -15,6 +15,9 @@
     <module>../mircoservice-eureka-7003</module>
       <module>../mircoservice-provider-student-8002</module>
       <module>../mircoservice-provider-student-8003</module>
+      <module>../mircoservice-consumer80-feign</module>
+      <module>../mircoservice-provider-show-8004</module>
+    <module>../mircoservice-consumer-hystrix-dashboard</module>
   </modules>
 
   <name>mircoservice-parent</name>
